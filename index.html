@@ -1,74 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title> Underline Growing and Scaling Bottom Effect </title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" />
 </head>
+
 <body>
   <style>
-     body{
+    body {
       background-color: #223e61;
-  font-family: Nunito, sans-serif;
-  color: #fff;
-     }
-     h2{
+      font-family: Nunito, sans-serif;
+      color: #fff;
+    }
+
+    h2 {
       display: flex;
       align-items: center;
-      width:100%
-      ;
+      width: 100%;
       height: 200px;
       justify-content: center;
-       margin: 24px auto;
-     }
-     h2.first {
-  background-color: #0D757D;
-}
-.link{
-   display: inline-block;
-   position: relative;
-   color: #fff;
-   font-size: 49px;
-   text-decoration: none;
-}
- .first .link::after{
-    content: '';
-    width: 100%;
-    height: 0;
-    background-color: #fff;
-    position: absolute;
-    opacity: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-      transition: height 0.15s ease-in-out ,  opacity ease-in-out;
- }
- .first .link:hover::after{
-   opacity: 1;
-   height: 5px;
- }
- .second .link::after{
-  content: '';
-  width: 100%;
-    height: 0;
-    background-color: #fff;
-    position: absolute;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     transform: scaleY(0);
-     transition: transform 0.15s ease-in;
+      margin: 24px auto;
+    }
 
- }
- .second .link:hover::after{
-   height: 5px  ;
-transform: scaleY(1.5);
-border-radius: 5px;
- }
-h2.second {
-  background-color: #ff5e33;
-}
+    h2.first {
+      background-color: #0D757D;
+    }
+
+    .link {
+      display: inline-block;
+      position: relative;
+      color: #fff;
+      font-size: 49px;
+      text-decoration: none;
+    }
+
+    .first .link::after {
+      content: '';
+      width: 100%;
+      height: 0;
+      background-color: #fff;
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transition: height 0.15s ease-in-out, opacity ease-in-out;
+    }
+
+    .first .link:hover::after {
+      opacity: 1;
+      height: 5px;
+    }
+
+    .second .link::after {
+      content: '';
+      width: 100%;
+      height: 0;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform: scaleY(0);
+      transition: transform 0.15s ease-in;
+
+    }
+
+    .second .link:hover::after {
+      height: 5px;
+      transform: scaleY(1.5);
+      border-radius: 5px;
+    }
+
+    h2.second {
+      background-color: #ff5e33;
+    }
   </style>
 
   <h2 class="first">
@@ -81,4 +90,5 @@ h2.second {
 
   <script src="script.js"></script>
 </body>
+
 </html>
